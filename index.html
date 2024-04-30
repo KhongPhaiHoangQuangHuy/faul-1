@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Faul Verlierer</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://ico.breadomatic.repl.co/images.ico" type="image/x-icon" />
+
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/cte.css">
+</head>
+<body>
+<div id="particles-container"></div>
+<audio controls hidden loop>
+<source src="assets/audio/back.mp3" type="audio/mpeg">
+</audio>
+<div id="content-container">
+<div class="center title topbar"><img class="emoji" src="assets/images/Slain1.png"> Hoàng Quang Huy <img class="emoji" src="assets/images/Slain1.png"></div>
+<span id="typing" class="center"></span>
+<div class="inline-container bottombar center">
+
+<pre style="display: inline-block;">|<div style="vertical-align: middle;" id="marquee"></div>|</pre>
+</div>
+</div>
+<script src="assets/particles.js/particles.min.js"></script>
+<script src="assets/particles.js/app.js"></script>
+<script src="assets/js/cte.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.marquee.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script type="text/javascript" src="assets/js/portfolio.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+<script src="https://cdn.jsdelivr.net/npm/kursor@0.0.14/dist/kursor.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+        server: '1141527939662483646', // Derank
+        channel: '1221806348749115472', // general
+    })
+</script>
+<script>
+          new kursor({
+            type: 1
+        })
+    // var CTE = {};
+    CTE.callback = () => {
+      var aud = document.getElementsByTagName("audio")[0];
+      aud.volume = .3;
+      aud.play();
+    
+      var typed = new Typed("#typing", {
+        strings: ["Anh thanh niên năm nay đã ngót nghét 30 rồi", "Sáng mua 5 nghìn xôi tối 3 nghìn trà đá", "Anh thanh niên năm nay vẫn chẳng thấy vợ con gì", "Anh nói mấy cô yêu nhưng anh không cần người yêu", "Không có việc gì khó", "Chỉ cần ta không làm", "dsc.gg/derank"],
+        typeSpeed: 50,
+        backspeed: 30,
+        showCursor: false
+      });
+
+      var lines = ["Xin chào mọi người! Tôi là Hoàng Quang Huy a.k.a", "Faul a.k.a", "Slain a.k.a", "huy lục yên a.k.a", "huy đơ", "Không Phải Hoàng Quang Huy"];
+      for (var x = 0;x < lines.length;x++)
+        $("#marquee").append(`${lines[x]}${(x < lines.length - 1? ' <img class="emoji" src="assets/images/Slain1.png"> ' : '')}`);
+
+      $("#marquee").marquee({
+        duration: 7500,
+        gap: 100,
+        delayBeforeStart: 1000,
+        direction: 'left',
+      });
+    }
+    // CTE.callback();
+  </script>
+</body>
+</html>
